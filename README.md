@@ -1,12 +1,21 @@
 # app-design — Claude Code skill
 
-A mobile app design playbook for Claude Code: what makes an app feel premium vs cheap, visual craft, junior→staff design thinking, UX psychology, filter/list/product-page patterns, motion strategy, iOS Live Activities / Dynamic Island / widgets, and a reference-first AI build workflow.
+Teaches Claude what makes a mobile app feel premium instead of cheap, and what it should add to every app. Framework- and tool-agnostic: it's about design decisions, so it works whatever the app is built with.
 
-Distilled from videos by Wyatt Feaster, uxpeak, and Jason Lee.
+**What's inside**
+
+- `SKILL.md` — the core: restraint rules, "what every app needs" checklist, how to review an app, final audit
+- `references/tokens.md` — concrete values: spacing scale, type sizes (iOS + Material), touch targets, contrast, radius, motion timing
+- `references/cheap-vs-premium.md` — the 12 details users feel, signs of an AI-generated look, visual craft, microcopy
+- `references/patterns.md` — junior → staff decisions for lists, filters, detail pages, search, forms; per-screen checklists
+- `references/psychology.md` — smart defaults, goal gradient, reciprocity, IKEA effect, loss aversion (with guardrails), anchoring
+- `references/motion-haptics.md` — what motion is for, must-have animations, characters/mascots, haptic mapping, sound
+- `references/platforms.md` — iOS vs Android conventions, widgets, live activities, ongoing notifications
+- `references/accessibility.md` — text scaling, contrast, screen readers, reduced motion, dark mode
+
+Claude reads `SKILL.md` and only opens the reference files a task needs.
 
 ## Install
-
-Copy the `app-design` folder into your Claude Code skills directory:
 
 ```bash
 git clone https://github.com/KacpersGitHub/app-design-skill.git
@@ -22,4 +31,16 @@ New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
 Copy-Item -Recurse app-design-skill\app-design "$HOME\.claude\skills\"
 ```
 
-Start a new Claude Code session. The skill loads automatically when you design or review app screens, or call it with `/app-design`.
+Start a new Claude Code session. The skill loads automatically when you design, review or improve app screens, or call it with `/app-design`.
+
+## Update
+
+```bash
+cd app-design-skill && git pull
+```
+
+Then copy the `app-design` folder over your installed copy again.
+
+## Sources
+
+Wyatt Feaster, uxpeak and Jason Lee (YouTube), Apple Human Interface Guidelines, Material Design 3, WCAG 2.2.
